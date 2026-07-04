@@ -1,0 +1,1119 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>翟羽佳作品集｜站酷风格长页</title>
+    <style>
+      :root {
+        --bg: #f4f4f2;
+        --card: #ffffff;
+        --ink: #18181b;
+        --muted: #6f6f76;
+        --line: #e4e4e7;
+        --soft: #f0f0ee;
+        --accent: #ea580c;
+      }
+
+      @media (pointer: fine) {
+        body {
+          cursor: none;
+        }
+
+        a,
+        button,
+        .work,
+        .method-card,
+        .hero-img {
+          cursor: none;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        border-bottom: 1px solid rgba(228, 228, 231, 0.86);
+        background: rgba(255, 255, 255, 0.88);
+        backdrop-filter: blur(18px);
+      }
+
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1240px;
+        height: 64px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      .brand {
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
+      .links {
+        display: flex;
+        gap: 26px;
+        color: #55555c;
+        font-size: 14px;
+      }
+
+      .cta {
+        border-radius: 999px;
+        background: #18181b;
+        color: white;
+        padding: 10px 18px;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .wrap {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      .hero {
+        padding: 64px 0 28px;
+      }
+
+      .hero-card,
+      .panel,
+      .work,
+      .method-card,
+      .stat-card {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: var(--card);
+        box-shadow: 0 18px 50px rgba(24, 24, 27, 0.05);
+      }
+
+      .hero-card {
+        padding: 32px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 0.88fr;
+        gap: 34px;
+        align-items: end;
+      }
+
+      .eyebrow {
+        margin: 0;
+        color: #707078;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 24px 0 0;
+        max-width: 820px;
+        font-size: clamp(76px, 12vw, 168px);
+        font-weight: 800;
+        letter-spacing: -0.065em;
+        line-height: 0.92;
+      }
+
+      .animated-title {
+        display: inline-flex;
+        position: relative;
+        flex-direction: column;
+        width: max-content;
+        max-width: 100%;
+        padding-right: 0.06em;
+        transform-style: preserve-3d;
+      }
+
+      .animated-title span {
+        display: block;
+        animation: title-float 4.8s ease-in-out infinite;
+      }
+
+      .animated-title svg {
+        width: 100%;
+        height: 0.16em;
+        margin-top: -0.02em;
+        overflow: visible;
+      }
+
+      .animated-title path {
+        stroke-dasharray: 420;
+        stroke-dashoffset: 420;
+        animation: underline-loop 3.2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+      }
+
+      .animated-title:hover path {
+        animation-duration: 1.35s;
+      }
+
+      @keyframes title-float {
+        0%,
+        100% {
+          transform: translateY(0) rotateX(0deg);
+        }
+
+        50% {
+          transform: translateY(-0.035em) rotateX(3deg);
+        }
+      }
+
+      @keyframes underline-loop {
+        0% {
+          stroke-dashoffset: 420;
+          opacity: 0;
+        }
+
+        12% {
+          opacity: 1;
+        }
+
+        42%,
+        68% {
+          stroke-dashoffset: 0;
+          opacity: 1;
+        }
+
+        100% {
+          stroke-dashoffset: -420;
+          opacity: 0;
+        }
+      }
+
+      .lead {
+        max-width: 760px;
+        margin: 28px 0 0;
+        color: #3f3f46;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.65;
+      }
+
+      .summary {
+        max-width: 820px;
+        margin: 24px 0 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.95;
+      }
+
+      .hero-img {
+        overflow: hidden;
+        border-radius: 10px;
+        background: var(--soft);
+      }
+
+      .hero-img img {
+        width: 100%;
+        min-height: 360px;
+        object-fit: cover;
+      }
+
+      .meta-grid,
+      .stats,
+      .method-grid,
+      .image-grid {
+        display: grid;
+        gap: 1px;
+      }
+
+      .meta-grid {
+        grid-template-columns: repeat(3, 1fr);
+        overflow: hidden;
+        margin-top: 32px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: var(--line);
+      }
+
+      .meta-item {
+        background: white;
+        padding: 18px;
+      }
+
+      .label {
+        color: #9a9aa2;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .value {
+        margin-top: 8px;
+        font-size: 15px;
+        font-weight: 800;
+        line-height: 1.65;
+      }
+
+      .stats {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+        margin-top: 20px;
+      }
+
+      .stat-card {
+        padding: 22px;
+      }
+
+      .stat-value {
+        font-size: 34px;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+      }
+
+      .stat-label {
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .method {
+        padding: 28px 0 72px;
+      }
+
+      .method-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+      }
+
+      .method-card {
+        padding: 26px;
+      }
+
+      .method-card b {
+        color: var(--accent);
+        font-size: 14px;
+      }
+
+      .method-card h2 {
+        margin: 18px 0 0;
+        font-size: 24px;
+        letter-spacing: -0.03em;
+        line-height: 1.2;
+      }
+
+      .method-card p {
+        margin: 16px 0 0;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.8;
+      }
+
+      .section {
+        padding: 0 0 96px;
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        gap: 42px;
+        border-top: 1px solid var(--line);
+        padding-top: 48px;
+      }
+
+      .section-code {
+        color: #6f6f76;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .section-number {
+        margin-top: 18px;
+        color: #dddde0;
+        font-size: 130px;
+        font-weight: 800;
+        letter-spacing: -0.08em;
+        line-height: 0.8;
+      }
+
+      .plus {
+        text-align: right;
+        font-size: 54px;
+        font-weight: 800;
+        line-height: 1;
+      }
+
+      .section h2 {
+        max-width: 820px;
+        margin: 12px 0 0;
+        font-size: clamp(40px, 6vw, 68px);
+        line-height: 1.05;
+        letter-spacing: -0.055em;
+      }
+
+      .section-intro {
+        max-width: 860px;
+        margin: 26px 0 0;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 2;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 28px;
+      }
+
+      .chips span {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: white;
+        padding: 9px 16px;
+        color: #515158;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        margin-top: 34px;
+      }
+
+      .work {
+        overflow: hidden;
+      }
+
+      .work.wide,
+      .work.full {
+        grid-column: 1 / -1;
+      }
+
+      .work-media {
+        background: var(--soft);
+      }
+
+      .work-media img {
+        width: 100%;
+      }
+
+      .work.full .work-media {
+        padding: 28px 12px;
+      }
+
+      .work.full .work-media img {
+        width: min(790px, 100%);
+        margin: 0 auto;
+      }
+
+      .detail-work .work-media {
+        padding: 20px;
+        background: #ffffff;
+      }
+
+      .detail-collage {
+        display: grid;
+        grid-template-columns: 1.08fr 0.56fr 0.56fr 1.08fr;
+        grid-template-rows: repeat(2, minmax(220px, 1fr));
+        gap: 8px;
+        aspect-ratio: 2.22 / 1;
+      }
+
+      .detail-tile {
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 4px;
+        background: #111111;
+      }
+
+      .detail-tile img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .detail-main {
+        grid-row: 1 / span 2;
+      }
+
+      .detail-main img {
+        object-position: center top;
+      }
+
+      .detail-spec {
+        grid-column: 4;
+        grid-row: 1 / span 2;
+      }
+
+      .detail-scene img {
+        object-position: center top;
+      }
+
+      .detail-power img,
+      .detail-sensor img,
+      .detail-control img {
+        object-position: center center;
+      }
+
+      .detail-spec img {
+        object-position: center top;
+      }
+
+      .detail-single {
+        display: block;
+        width: 100%;
+        background: #ffffff;
+      }
+
+      .detail-work .work-media .detail-single {
+        width: 100%;
+        margin: 0;
+      }
+
+      .caption {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        gap: 18px;
+        border-top: 1px solid var(--line);
+        padding: 20px;
+      }
+
+      .caption h3 {
+        margin: 0;
+        font-size: 17px;
+      }
+
+      .caption p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.8;
+      }
+
+      .final {
+        padding-bottom: 90px;
+      }
+
+      .final-panel {
+        border-radius: 10px;
+        background: #18181b;
+        color: white;
+        padding: 42px;
+      }
+
+      .final-panel h2 {
+        max-width: 850px;
+        margin: 24px 0 0;
+        font-size: clamp(36px, 5vw, 62px);
+        line-height: 1.08;
+        letter-spacing: -0.055em;
+      }
+
+      .final-panel p {
+        max-width: 850px;
+        margin: 24px 0 0;
+        color: #d4d4d8;
+        font-size: 16px;
+        line-height: 1.9;
+      }
+
+      .velocity-section {
+        overflow: hidden;
+        margin-top: 32px;
+        border-block: 1px solid rgba(255, 255, 255, 0.14);
+        padding: 14px 0;
+      }
+
+      .velocity-row {
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .velocity-row + .velocity-row {
+        margin-top: 8px;
+        opacity: 0.72;
+      }
+
+      .velocity-scroller {
+        display: flex;
+        width: max-content;
+        will-change: transform;
+      }
+
+      .velocity-text {
+        flex: 0 0 auto;
+        padding-right: 28px;
+        color: white;
+        font-size: clamp(28px, 5vw, 76px);
+        font-weight: 900;
+        letter-spacing: -0.05em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .velocity-row:nth-child(2) .velocity-text {
+        color: transparent;
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.55);
+      }
+
+      .final-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 34px;
+      }
+
+      .final-tags span {
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 999px;
+        padding: 9px 16px;
+        color: #e4e4e7;
+        font-size: 14px;
+      }
+
+      .morph-cursor,
+      .morph-cursor-trail {
+        display: none;
+      }
+
+      @media (pointer: fine) {
+        .morph-cursor,
+        .morph-cursor-trail {
+          display: block;
+          position: fixed;
+          left: 0;
+          top: 0;
+          z-index: 9999;
+          pointer-events: none;
+          opacity: 0;
+        }
+
+        .morph-cursor {
+          width: 36px;
+          height: 36px;
+          border-radius: 999px;
+          background: #050505;
+          mix-blend-mode: difference;
+          transform: translate3d(calc(var(--cursor-x, 50vw) - 50%), calc(var(--cursor-y, 50vh) - 50%), 0) scale(var(--cursor-scale, 1));
+          transition:
+            width 0.22s ease,
+            height 0.22s ease,
+            border-radius 0.22s ease,
+            opacity 0.18s ease,
+            transform 0.08s linear;
+        }
+
+        .morph-cursor::after {
+          content: attr(data-label);
+          position: absolute;
+          inset: 0;
+          display: grid;
+          place-items: center;
+          color: white;
+          font-size: 13px;
+          font-weight: 800;
+          letter-spacing: 0.08em;
+          opacity: 0;
+          transform: scale(0.7);
+          transition:
+            opacity 0.18s ease,
+            transform 0.18s ease;
+        }
+
+        .morph-cursor.is-active {
+          width: 92px;
+          height: 92px;
+          border-radius: 32px;
+        }
+
+        .morph-cursor.is-active::after {
+          opacity: 1;
+          transform: scale(1);
+        }
+
+        .morph-cursor-trail {
+          width: 54px;
+          height: 54px;
+          border: 1px solid rgba(5, 5, 5, 0.32);
+          border-radius: 999px;
+          transform: translate3d(calc(var(--trail-x, 50vw) - 50%), calc(var(--trail-y, 50vh) - 50%), 0);
+          transition:
+            width 0.24s ease,
+            height 0.24s ease,
+            border-radius 0.24s ease,
+            opacity 0.18s ease;
+        }
+
+        .morph-cursor-trail.is-active {
+          width: 116px;
+          height: 116px;
+          border-radius: 38px;
+        }
+
+        .morph-cursor.is-hidden {
+          opacity: 0;
+        }
+
+        .morph-cursor:not(.is-hidden),
+        .morph-cursor-trail:not(.is-hidden) {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 1120px) {
+        .method-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 860px) {
+        .links {
+          display: none;
+        }
+
+        .hero-card {
+          padding: 22px;
+        }
+
+        .hero-grid,
+        .section-head,
+        .caption {
+          grid-template-columns: 1fr;
+        }
+
+        .meta-grid,
+        .stats,
+        .method-grid,
+        .image-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .detail-work .work-media {
+          padding: 10px;
+        }
+
+        .detail-collage {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-template-rows: none;
+          aspect-ratio: auto;
+        }
+
+        .detail-tile {
+          min-height: 220px;
+        }
+
+        .detail-main,
+        .detail-spec {
+          grid-column: auto;
+          grid-row: auto;
+          min-height: 440px;
+        }
+
+        .section-number {
+          font-size: 100px;
+        }
+
+        .plus {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="morph-cursor-trail is-hidden" aria-hidden="true"></div>
+    <div class="morph-cursor is-hidden" aria-hidden="true"></div>
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="#" class="brand">翟羽佳作品集</a>
+        <div class="links">
+          <a href="#part01">电商视觉</a>
+          <a href="#part02">海报传播</a>
+          <a href="#part03">品牌系统</a>
+          <a href="#part04">活动物料</a>
+          <a href="#part05">AIGC</a>
+        </div>
+        <a class="cta" href="#summary">面试联系</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero wrap">
+        <div class="hero-card">
+          <div class="hero-grid">
+            <div>
+              <p class="eyebrow">Visual Portfolio / 2025</p>
+              <h1 class="animated-title" aria-label="翟羽佳">
+                <span>翟羽佳</span>
+                <svg viewBox="0 0 420 44" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M10 26 C98 4, 306 46, 410 18" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" />
+                </svg>
+              </h1>
+              <p class="lead">电商视觉设计、品牌营销、活动物料与 AIGC 商业视觉探索。</p>
+              <p class="summary">
+                您好，我是一名有5年格力电器电商视觉设计经验的设计师，主要方向是电商视觉设计和品牌视觉系统搭建。
+                在工作过程中，我逐渐形成一个核心方法论：视觉不是单纯的美化，而是服务于信息结构和商业转化。
+              </p>
+            </div>
+            <div class="hero-img">
+              <img src="public/work/gree-star5.jpg" alt="格力 Star 5 产品视觉" />
+            </div>
+          </div>
+          <div class="meta-grid">
+            <div class="meta-item"><div class="label">姓名</div><div class="value">翟羽佳</div></div>
+            <div class="meta-item"><div class="label">院校</div><div class="value">天津理工大学</div></div>
+            <div class="meta-item"><div class="label">专业</div><div class="value">视觉传达设计 / 工商管理双学士</div></div>
+            <div class="meta-item"><div class="label">经历</div><div class="value">珠海格力电器股份有限公司</div></div>
+            <div class="meta-item"><div class="label">方向</div><div class="value">电商视觉 / 品牌营销 / AIGC 视觉</div></div>
+            <div class="meta-item"><div class="label">岗位</div><div class="value">平面设计师</div></div>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="stat-card"><div class="stat-value">2021-至今</div><div class="stat-label">商业视觉实践</div></div>
+          <div class="stat-card"><div class="stat-value">5 类</div><div class="stat-label">作品能力方向</div></div>
+          <div class="stat-card"><div class="stat-value">70 页</div><div class="stat-label">原始作品集内容</div></div>
+          <div class="stat-card"><div class="stat-value">18+</div><div class="stat-label">精选主视觉素材</div></div>
+        </div>
+      </section>
+
+      <section class="method wrap">
+        <div class="method-grid">
+          <article class="method-card">
+            <b>01</b>
+            <h2>电商详情页与产品视觉</h2>
+            <p>把家电产品的功能、场景和购买理由转译成高识别视觉。页面重点从“展示一张好看的图”转向“让用户快速理解为什么值得买”。</p>
+          </article>
+          <article class="method-card">
+            <b>02</b>
+            <h2>营销海报与品牌传播</h2>
+            <p>围绕大促节点、品牌活动、产品上新和科技表达建立主视觉。通过强标题、强主体和明确利益点，让单张海报具备传播效率。</p>
+          </article>
+          <article class="method-card">
+            <b>03</b>
+            <h2>品牌系统与视觉规范</h2>
+            <p>从字体、色彩、辅助图形、版式网格到应用场景，建立可延展的品牌识别规则，让不同物料保持同一种视觉语言。</p>
+          </article>
+          <article class="method-card">
+            <b>04</b>
+            <h2>活动物料与渠道落地</h2>
+            <p>作品从线上画面延伸到线下会场、门店、车体、导视和活动物料，强调跨场景的一致表达与执行完整度。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="part01" class="section wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-code">PART 01 / Case Share</div>
+            <div class="section-number">01</div>
+          </div>
+          <div>
+            <div class="plus">+</div>
+            <h2>电商详情页与产品视觉</h2>
+            <p class="section-intro">把家电产品的功能、场景和购买理由转译成高识别视觉。页面重点从“展示一张好看的图”转向“让用户快速理解为什么值得买”。</p>
+            <div class="chips"><span>卖点提炼</span><span>首屏吸引</span><span>参数可读</span><span>长图叙事</span></div>
+          </div>
+        </div>
+        <div class="image-grid">
+          <figure class="work wide">
+            <div class="work-media"><img src="public/work/gree-air-fryer.png" alt="大松空气炸锅主视觉" /></div>
+            <figcaption class="caption"><h3>大松空气炸锅主视觉</h3><p>生活场景、食物氛围与产品主体结合，强化健康柔风烤的产品记忆。</p></figcaption>
+          </figure>
+          <figure class="work">
+            <div class="work-media"><img src="public/work/gree-fresh-lychee.png" alt="格力冰箱城市挑战活动" /></div>
+            <figcaption class="caption"><h3>格力冰箱城市挑战活动</h3><p>以荔枝鲜度为视觉锚点，将活动路线、地域符号和产品卖点整合。</p></figcaption>
+          </figure>
+          <figure class="work">
+            <div class="work-media"><img src="public/work/washing-drum-detail.png" alt="洗护内筒产品视觉" /></div>
+            <figcaption class="caption"><h3>洗护内筒产品视觉</h3><p>以洁净内筒结构和水流细节，突出洗护产品的洁净质感。</p></figcaption>
+          </figure>
+          <figure class="work full detail-work">
+            <div class="work-media">
+              <img class="detail-single" src="public/work/rangehood-detail-collage.png" alt="油烟机详情页拼版" />
+            </div>
+            <figcaption class="caption"><h3>油烟机详情页拼版</h3><p>将详情页关键卖点整合为多屏拼版，清晰呈现首屏、功能、场景与核心技术信息。</p></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="part02" class="section wrap">
+        <div class="section-head">
+          <div><div class="section-code">PART 02 / Poster System</div><div class="section-number">02</div></div>
+          <div>
+            <div class="plus">+</div>
+            <h2>营销海报与品牌传播</h2>
+            <p class="section-intro">围绕大促节点、品牌活动、产品上新和科技表达建立主视觉。通过强标题、强主体和明确利益点，让单张海报具备传播效率。</p>
+            <div class="chips"><span>活动 KV</span><span>品牌主张</span><span>科技调性</span><span>多尺寸延展</span></div>
+          </div>
+        </div>
+        <div class="image-grid">
+          <figure class="work wide">
+            <div class="work-media"><img src="public/work/gree-ai-chip.png" alt="EAI 芯片科技视觉" /></div>
+            <figcaption class="caption"><h3>EAI 芯片科技视觉</h3><p>黑金科技画面强化自主研发、算力和智造心智。</p></figcaption>
+          </figure>
+          <figure class="work">
+            <div class="work-media"><img src="public/work/gree-robot-rag.png" alt="工业知识 RAG 传播视觉" /></div>
+            <figcaption class="caption"><h3>工业知识 RAG 传播视觉</h3><p>用机器人与蓝色数据光效传达工业智能和知识检索效率。</p></figcaption>
+          </figure>
+          <figure class="work">
+            <div class="work-media"><img src="public/work/gree-purple-washer.png" alt="如新洗衣机产品视觉" /></div>
+            <figcaption class="caption"><h3>如新洗衣机产品视觉</h3><p>紫色材质、晶体花朵与柔软水面建立高端洗护氛围。</p></figcaption>
+          </figure>
+          <figure class="work wide">
+            <div class="work-media"><img src="public/work/gree-star5.jpg" alt="Star 5 空调科技主视觉" /></div>
+            <figcaption class="caption"><h3>Star 5 空调科技主视觉</h3><p>透明外壳和金色光感强调高端科技与内部结构表现。</p></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="part03" class="section wrap">
+        <div class="section-head">
+          <div><div class="section-code">PART 03 / Brand System</div><div class="section-number">03</div></div>
+          <div>
+            <div class="plus">+</div>
+            <h2>品牌系统与视觉规范</h2>
+            <p class="section-intro">从字体、色彩、辅助图形、版式网格到应用场景，建立可延展的品牌识别规则，让不同物料保持同一种视觉语言。</p>
+            <div class="chips"><span>识别规范</span><span>色彩系统</span><span>多触点应用</span><span>包装延展</span></div>
+          </div>
+        </div>
+        <div class="image-grid">
+          <figure class="work wide">
+            <div class="work-media"><img src="public/work/gree-brand-system.png" alt="格力真好品牌规范" /></div>
+            <figcaption class="caption"><h3>格力真好品牌规范</h3><p>包含标志推导、比例规范、黑白反白、色彩、字体和应用延展。</p></figcaption>
+          </figure>
+          <figure class="work">
+            <div class="work-media"><img src="public/work/brand-bus-system.png" alt="品牌视觉延展" /></div>
+            <figcaption class="caption"><h3>品牌视觉延展</h3><p>将系统应用到不同物料，保证识别统一和传播一致。</p></figcaption>
+          </figure>
+          <figure class="work">
+            <div class="work-media"><img src="public/work/liugong-valley.png" alt="文创 IP 设计" /></div>
+            <figcaption class="caption"><h3>文创 IP 设计</h3><p>以 IP 形象、图案和周边物料延展品牌亲和力。</p></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="part04" class="section wrap">
+        <div class="section-head">
+          <div><div class="section-code">PART 04 / Campaign Materials</div><div class="section-number">04</div></div>
+          <div>
+            <div class="plus">+</div>
+            <h2>活动物料与渠道落地</h2>
+            <p class="section-intro">作品从线上画面延伸到线下会场、门店、车体、导视和活动物料，强调跨场景的一致表达与执行完整度。</p>
+            <div class="chips"><span>线上投放</span><span>门店物料</span><span>会场延展</span><span>渠道适配</span></div>
+          </div>
+        </div>
+        <div class="image-grid">
+          <figure class="work wide">
+            <div class="work-media"><img src="public/assets/project-event.jpg" alt="活动主视觉与会场物料" /></div>
+            <figcaption class="caption"><h3>活动主视觉与会场物料</h3><p>围绕年度节点建立红色活动视觉，并向门店、海报和会场屏幕延展。</p></figcaption>
+          </figure>
+          <figure class="work">
+            <div class="work-media"><img src="public/work/store-year-goods-front.png" alt="门店活动入口视觉" /></div>
+            <figcaption class="caption"><h3>门店活动入口视觉</h3><p>将活动主题放入门店入口和海报物料中，强化节庆氛围与促销识别。</p></figcaption>
+          </figure>
+          <figure class="work">
+            <div class="work-media"><img src="public/work/store-year-goods-wall.png" alt="线下零售场景" /></div>
+            <figcaption class="caption"><h3>线下零售场景</h3><p>将活动视觉放入门店终端，强化真实落地效果。</p></figcaption>
+          </figure>
+          <figure class="work wide">
+            <div class="work-media"><img src="public/work/kitchen-scenery.png" alt="讲师大赛传播视觉" /></div>
+            <figcaption class="caption"><h3>讲师大赛传播视觉</h3><p>轻量插画和清晰流程信息适配内部传播活动。</p></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="part05" class="section wrap">
+        <div class="section-head">
+          <div><div class="section-code">PART 05 / AIGC Workflow</div><div class="section-number">05</div></div>
+          <div>
+            <div class="plus">+</div>
+            <h2>AIGC 辅助商业视觉探索</h2>
+            <p class="section-intro">将 AI 作为方向探索、场景构图、材质气氛和概念验证工具，再由人工完成品牌一致性、信息层级和落地判断。</p>
+            <div class="chips"><span>需求拆解</span><span>提示词结构</span><span>图像筛选</span><span>人工修正</span></div>
+          </div>
+        </div>
+        <div class="image-grid">
+          <figure class="work wide">
+            <div class="work-media"><img src="public/work/gree-focus-portrait.png" alt="全屋智能家电场景" /></div>
+            <figcaption class="caption"><h3>全屋智能家电场景</h3><p>以统一空间构图表达健康生态和多品类联动。</p></figcaption>
+          </figure>
+          <figure class="work">
+            <div class="work-media"><img src="public/work/fresh-lychee-compartment.png" alt="活动视觉方向探索" /></div>
+            <figcaption class="caption"><h3>活动视觉方向探索</h3><p>将品牌活动语气与高识别主视觉结合，服务前期方案判断。</p></figcaption>
+          </figure>
+          <figure class="work">
+            <div class="work-media"><img src="public/work/rangehood-x1-poster.jpg" alt="烟机产品主视觉" /></div>
+            <figcaption class="caption"><h3>烟机产品主视觉</h3><p>用舞台化光影与气流表现，强化超薄中吸和净烟无踪的产品卖点。</p></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="summary" class="final wrap">
+        <div class="final-panel">
+          <p class="eyebrow">Portfolio Summary</p>
+          <h2>这份作品集重点呈现商业视觉里的判断力、执行力和系统延展能力。</h2>
+          <p>
+            从电商详情页到品牌规范，从活动主视觉到线下物料，从 AIGC 探索到最终落地，核心目标都是让产品价值被快速理解，让品牌表达保持一致。
+          </p>
+          <div class="velocity-section" data-scroll-velocity>
+            <div class="velocity-row" data-base-velocity="54">
+              <div class="velocity-scroller">
+                <span class="velocity-text">平面设计师 · 商业视觉 · 品牌系统 · 活动物料 · </span>
+                <span class="velocity-text">平面设计师 · 商业视觉 · 品牌系统 · 活动物料 · </span>
+                <span class="velocity-text">平面设计师 · 商业视觉 · 品牌系统 · 活动物料 · </span>
+                <span class="velocity-text">平面设计师 · 商业视觉 · 品牌系统 · 活动物料 · </span>
+              </div>
+            </div>
+            <div class="velocity-row" data-base-velocity="-42">
+              <div class="velocity-scroller">
+                <span class="velocity-text">GRAPHIC DESIGNER · VISUAL PORTFOLIO · GREE EXPERIENCE · </span>
+                <span class="velocity-text">GRAPHIC DESIGNER · VISUAL PORTFOLIO · GREE EXPERIENCE · </span>
+                <span class="velocity-text">GRAPHIC DESIGNER · VISUAL PORTFOLIO · GREE EXPERIENCE · </span>
+                <span class="velocity-text">GRAPHIC DESIGNER · VISUAL PORTFOLIO · GREE EXPERIENCE · </span>
+              </div>
+            </div>
+          </div>
+          <div class="final-tags">
+            <span>电商视觉</span><span>品牌系统</span><span>活动物料</span><span>新媒体</span><span>AIGC</span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      (() => {
+        const cursor = document.querySelector(".morph-cursor");
+        const trail = document.querySelector(".morph-cursor-trail");
+        if (!cursor || !trail || !window.matchMedia("(pointer: fine)").matches) return;
+
+        let x = window.innerWidth / 2;
+        let y = window.innerHeight / 2;
+        let trailX = x;
+        let trailY = y;
+        let tx = x;
+        let ty = y;
+        const interactive = "a, button, .work, .method-card, .hero-img, .animated-title";
+
+        function tick() {
+          x += (tx - x) * 0.22;
+          y += (ty - y) * 0.22;
+          trailX += (tx - trailX) * 0.09;
+          trailY += (ty - trailY) * 0.09;
+          cursor.style.setProperty("--cursor-x", `${x}px`);
+          cursor.style.setProperty("--cursor-y", `${y}px`);
+          trail.style.setProperty("--trail-x", `${trailX}px`);
+          trail.style.setProperty("--trail-y", `${trailY}px`);
+          requestAnimationFrame(tick);
+        }
+
+        window.addEventListener("mousemove", (event) => {
+          tx = event.clientX;
+          ty = event.clientY;
+          const eventTarget = event.target instanceof Element ? event.target : null;
+          const target = eventTarget?.closest(interactive);
+          const active = Boolean(target);
+          const label = target?.classList?.contains("animated-title")
+            ? "YJ"
+            : target?.classList?.contains("work")
+              ? "查看"
+              : target?.tagName === "A"
+                ? "进入"
+                : "浏览";
+
+          cursor.classList.remove("is-hidden");
+          trail.classList.remove("is-hidden");
+          cursor.classList.toggle("is-active", active);
+          trail.classList.toggle("is-active", active);
+          cursor.setAttribute("data-label", active ? label : "");
+        });
+
+        window.addEventListener("mouseleave", () => {
+          cursor.classList.add("is-hidden");
+          trail.classList.add("is-hidden");
+        });
+
+        window.addEventListener("mouseenter", () => {
+          cursor.classList.remove("is-hidden");
+          trail.classList.remove("is-hidden");
+        });
+
+        tick();
+      })();
+
+      (() => {
+        const rows = Array.from(document.querySelectorAll("[data-scroll-velocity] .velocity-row"));
+        if (!rows.length) return;
+
+        let lastY = window.scrollY;
+        let velocity = 0;
+        let smoothVelocity = 0;
+
+        window.addEventListener(
+          "scroll",
+          () => {
+            const nextY = window.scrollY;
+            velocity = nextY - lastY;
+            lastY = nextY;
+          },
+          { passive: true }
+        );
+
+        const wrap = (width, value) => {
+          if (!width) return 0;
+          return ((value % width) + width) % width;
+        };
+
+        rows.forEach((row) => {
+          row.dataset.x = "0";
+        });
+
+        function animateVelocityText() {
+          smoothVelocity += (velocity - smoothVelocity) * 0.08;
+          velocity *= 0.92;
+
+          rows.forEach((row) => {
+            const scroller = row.querySelector(".velocity-scroller");
+            const copy = row.querySelector(".velocity-text");
+            if (!scroller || !copy) return;
+
+            const width = copy.getBoundingClientRect().width;
+            const base = Number(row.dataset.baseVelocity || 48);
+            const nextX = Number(row.dataset.x || 0) + base * 0.016 + smoothVelocity * 0.28;
+
+            row.dataset.x = String(nextX);
+            scroller.style.transform = `translate3d(${-wrap(width, nextX)}px, 0, 0)`;
+          });
+
+          requestAnimationFrame(animateVelocityText);
+        }
+
+        animateVelocityText();
+      })();
+    </script>
+  </body>
+</html>
